@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="227.0" prefWidth="596.0" style="-fx-background-color: #e3a8d2;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.predilleto.app.MainController">
+   <children>
+      <Label fx:id="titleLabel" alignment="CENTER" layoutY="14.0" prefHeight="17.0" prefWidth="594.0" text="Song" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font name="Century Gothic" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="artistLabel" alignment="CENTER" layoutY="48.0" prefHeight="17.0" prefWidth="594.0" text="Artist" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="genreLabel" alignment="CENTER" layoutY="89.0" prefHeight="17.0" prefWidth="594.0" text="Genre" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="progressSong" layoutX="95.0" layoutY="116.0" prefHeight="11.0" prefWidth="406.0" progress="0.0" AnchorPane.leftAnchor="95.0" AnchorPane.rightAnchor="95.0" />
+      <Slider fx:id="volumeSlider" blockIncrement="5.0" layoutX="442.0" layoutY="184.0" prefHeight="14.0" prefWidth="106.0" showTickMarks="true" value="100.0" />
+      <ImageView fx:id="playPauseView" fitHeight="64.0" fitWidth="64.0" layoutX="266.0" layoutY="141.0" onMouseExited="#mouseOutPlay" onMouseMoved="#onDragPlay" onMousePressed="#playMedia" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="266.0" AnchorPane.rightAnchor="266.0">
+         <image>
+            <Image url="@icons/play-button.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="previousView" fitHeight="36.0" fitWidth="43.0" layoutX="224.0" layoutY="155.0" onMouseExited="#mouseOutPrevious" onMouseMoved="#mouseOnPrevious" onMousePressed="#previousMedia" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="224.0" AnchorPane.rightAnchor="336.0">
+         <image>
+            <Image url="@icons/previous.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="nextView" fitHeight="36.0" fitWidth="43.0" layoutX="338.0" layoutY="155.0" onMouseExited="#mouseOutNext" onMouseMoved="#mouseOnNext" onMousePressed="#nextMedia" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="338.0">
+         <image>
+            <Image url="@icons/next.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="shuffleView" fitHeight="36.0" fitWidth="43.0" layoutX="179.0" layoutY="173.0" onMouseExited="#mouseOutShuffle" onMouseMoved="#mouseOnShuffle" onMousePressed="#shuffle" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/shuffle.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="volumeView" fitHeight="36.0" fitWidth="43.0" layoutX="382.0" layoutY="173.0" onMouseExited="#mouseOutVolume" onMouseMoved="#mouseOnVolume" onMousePressed="#volume" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/volume-up.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="heartView" fitHeight="25.0" fitWidth="26.0" layoutX="515.0" layoutY="109.0" onMousePressed="#hearted" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/heart.png" />
+         </image>
+      </ImageView>
+      <CheckBox fx:id="shuffleCheck" layoutX="57.0" layoutY="183.0" mnemonicParsing="false" onAction="#checkShuffle" prefHeight="17.0" prefWidth="106.0" text="Score Shuffle">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </CheckBox>
+   </children>
+</AnchorPane>
